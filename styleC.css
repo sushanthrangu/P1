@@ -1,0 +1,64 @@
+@keyframes example {
+  0%   {background-color:red; left:0; right:0;}
+  25%  {background-color:yellow; left:200px; right:200px;}
+  50%  {background-color:blue; left:200px; right:200px;}
+  75%  {background-color:green; left:200px; right:200px;}
+  100% {background-color:red; left:0; right:0;}
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  margin: 0;
+
+
+  .box {
+    width: 100px;
+    height: 100px;
+    border-top: 1px solid #687291;
+    border-bottom: 1px solid #687291;
+    border-right: 1px solid #687291;
+    border-left: 1px solid #687291;
+    font-family: Tahoma, sans-serif;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 2s;
+    animation-name: example;
+
+
+  }
+
+  #B:hover,#D:hover {
+    background-image: linear-gradient(red, yellow, green);
+    width: 35px;
+    cursor: pointer;
+
+  }
+
+  #A,#C,#E {
+    background-color: #eeeff2;
+    animation-duration: 4s;
+
+  }
+  #C{
+    position: relative;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+  }
+
+  #F {
+    border: 4px solid black;
+    background-color: #687291;
+    color: white;
+
+  }
+
+}
+
+
+
